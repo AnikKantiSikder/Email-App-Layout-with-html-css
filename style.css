@@ -17,7 +17,7 @@ body {
     grid-template-rows: 80px 1fr;
 }
 
-nav,menu,section,main,aside{
+nav,section,main,aside{
     padding-top: 24px;
 }
 
@@ -28,12 +28,48 @@ nav {
 }
 menu {
     background-color: #7048e8;
-    color: #fff;
     grid-column: 2 / -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 40px;
+}
+/* Buttons inside of Menu */
+button {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #5f3dc4;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px 12px;
+}
+/* Selecting the Trash button with psedu class */
+button:last-child {
+    background-color: #d6336c;
+    margin-left: auto;
 }
 
 section {
     background-color: #e9ecef;
+    padding: 40px;
+
+    overflow: scroll;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.email {
+    background-color: #adb5bd;
+    height: 96px;
+    /* To use scroll in flexbox and keep the content
+    size unchanged we have to use the shrink */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 aside {
